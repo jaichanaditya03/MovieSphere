@@ -3,6 +3,7 @@
 ## 🎬 Project Overview
 A modern, responsive movie review and rating platform built with vanilla HTML, CSS, and JavaScript. Users can discover movies, read details, rate films, and write reviews.
 
+🔗 Live Demo: [Click here to view](https://jaimoviesphere.netlify.app/)
 ## 🚀 Features
 - **Movie Discovery**: Search and browse trending/top-rated movies
 - **Movie Details**: Comprehensive information including cast, plot, ratings
