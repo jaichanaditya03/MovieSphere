@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSphere - Discover, Rate & Review Movies</title>
+    <meta name="description" content="A comprehensive movie review and rating platform for film enthusiasts">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">🎬 MovieSphere</h1>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#trending" class="nav-link">Trending</a></li>
+                        <li><a href="#top-rated" class="nav-link">Top Rated</a></li>
+                        <li><a href="#my-reviews" class="nav-link">My Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Discover Your Next Favorite Movie</h2>
+                    <p class="hero-subtitle">Rate, review, and explore thousands of films with fellow movie enthusiasts</p>
+                    
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <form class="search-form" id="search-form">
+                            <input 
+                                type="text" 
+                                class="search-input" 
+                                id="search-input"
+                                placeholder="Search for movies..."
+                                autocomplete="off"
+                            >
+                            <button type="submit" class="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <div class="search-suggestions" id="search-suggestions"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movie Sections -->
+        <section class="movies-section" id="trending">
+            <div class="container">
+                <h3 class="section-title">Trending Now</h3>
+                <div class="movies-grid" id="trending-movies">
+                    <!-- Movies will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="movies-section" id="top-rated">
+            <div class="container">
+                <h3 class="section-title">Top Rated Movies</h3>
+                <div class="movies-grid" id="top-rated-movies">
+                    <!-- Movies will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Results -->
+        <section class="movies-section hidden" id="search-results">
+            <div class="container">
+                <h3 class="section-title">Search Results</h3>
+                <div class="movies-grid" id="search-results-grid">
+                    <!-- Search results will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- My Reviews Section -->
+        <section class="reviews-section" id="my-reviews">
+            <div class="container">
+                <h3 class="section-title">My Reviews</h3>
+                <div class="reviews-grid" id="user-reviews">
+                    <!-- User reviews will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Movie Modal -->
+    <div class="modal hidden" id="movie-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modal-body">
+                <!-- Movie details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading hidden" id="loading">
+        <div class="spinner"></div>
+        <p>Loading movies...</p>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MovieSphere. Data provided by TMDB API.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/env-config.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
