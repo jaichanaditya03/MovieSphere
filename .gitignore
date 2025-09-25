@@ -16,6 +16,7 @@ config/secrets.js
 config/keys.js
 **/api-keys.js
 **/secrets.json
+js/config.local.js   
 
 # OS generated files
 .DS_Store

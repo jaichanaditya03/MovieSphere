@@ -4,7 +4,7 @@ const CONFIG = {
     TMDB: {
         BASE_URL: (typeof envConfig !== 'undefined' && envConfig.get('TMDB_BASE_URL')) || 'https://api.themoviedb.org/3',
         IMAGE_BASE_URL: (typeof envConfig !== 'undefined' && envConfig.get('TMDB_IMAGE_BASE_URL')) || 'https://image.tmdb.org/t/p',
-        API_KEY: (typeof envConfig !== 'undefined' && envConfig.get('TMDB_API_KEY')) || '2327ea19fe841759d899118abf7eade6', // Fallback to current key
+        API_KEY: (typeof envConfig !== 'undefined' && envConfig.get('TMDB_API_KEY')) || null, // Fallback to current key
         POSTER_SIZES: {
             SMALL: '/w342',
             MEDIUM: '/w500',
